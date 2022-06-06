@@ -29,3 +29,12 @@ struct Wording {
 struct Color {
     static let grayCustomBackground: UIColor = UIColor(red: 229/255, green: 229/255, blue: 229/255, alpha: 1)
 }
+
+struct urlApi {
+    static let baseUrl = "https://jsonplaceholder.typicode.com"
+    static let postsUrlPath = "posts"
+    static let usersUrlPath = "users"
+    static let albumsUrlPath = "albums"
+    static let photosUrlPath = "photos"
+    static let commentsUrlPath = "comments"
+}

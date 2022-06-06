@@ -17,7 +17,7 @@ struct UserDetailDataRepository: UserDetailRepository {
     
     func getUsers(userId: Int, completion: @escaping (Users?) -> Void) {
         let userId = String(userId)
-        let urlString = ["https://jsonplaceholder.typicode.com/users", userId].joined(separator: "/")
+        let urlString = [urlApi.baseUrl, urlApi.usersUrlPath, userId].joined(separator: "/")
         
         guard let url = URL(string: urlString) else {
             return
@@ -43,7 +43,7 @@ struct UserDetailDataRepository: UserDetailRepository {
     
     func getAlbumsUser(userId: Int, completion: @escaping ([Album]) -> Void) {
         let userId = String(userId)
-        let urlString = ["https://jsonplaceholder.typicode.com/users", userId, "albums"].joined(separator: "/")
+        let urlString = [urlApi.baseUrl, urlApi.usersUrlPath, userId, urlApi.albumsUrlPath].joined(separator: "/")
         
         guard let url = URL(string: urlString) else {
             return
@@ -69,7 +69,7 @@ struct UserDetailDataRepository: UserDetailRepository {
     
     func getListPhotos(albumId: Int, completion: @escaping ([Photo]) -> Void) {
         let albumId = String(albumId)
-        let urlString = ["https://jsonplaceholder.typicode.com/albums", albumId, "photos"].joined(separator: "/")
+        let urlString = [urlApi.baseUrl, urlApi.albumsUrlPath, albumId, urlApi.photosUrlPath].joined(separator: "/")
         
         guard let url = URL(string: urlString) else {
             return

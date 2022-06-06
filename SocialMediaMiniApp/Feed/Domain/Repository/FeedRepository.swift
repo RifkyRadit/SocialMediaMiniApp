@@ -15,7 +15,7 @@ public protocol FeedRepository {
 struct FeedDataRepository: FeedRepository {
     
     public func getListPosts(completion: @escaping ([Posts]) -> Void) {
-        let urlString = "https://jsonplaceholder.typicode.com/posts"
+        let urlString = [urlApi.baseUrl, urlApi.postsUrlPath].joined(separator: "/")
         
         guard let url = URL(string: urlString) else {
             return
@@ -40,7 +40,7 @@ struct FeedDataRepository: FeedRepository {
     }
     
     func getUsers(completion: @escaping ([Users]) -> Void) {
-        let urlString = "https://jsonplaceholder.typicode.com/users"
+        let urlString = [urlApi.baseUrl, urlApi.usersUrlPath].joined(separator: "/")
         
         guard let url = URL(string: urlString) else {
             return

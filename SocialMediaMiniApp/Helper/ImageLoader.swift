@@ -21,5 +21,4 @@ struct ImageDownloader {
             imageView.image = UIImage(named: "placeholder-image")
         }
     }
-
 }

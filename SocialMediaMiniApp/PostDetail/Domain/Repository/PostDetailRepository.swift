@@ -14,8 +14,8 @@ public protocol PostDetailRepository {
 struct PostDetailDataRepository: PostDetailRepository {
     
     func getListComments(postId: Int, completion: @escaping ([Comment]) -> Void) {
-        let pathComments = "\(postId)/comments"
-        let urlString = ["https://jsonplaceholder.typicode.com/posts", pathComments].joined(separator: "/")
+        let postId = String(postId)
+        let urlString = [urlApi.baseUrl, urlApi.postsUrlPath, postId, urlApi.commentsUrlPath].joined(separator: "/")
         
         guard let url = URL(string: urlString) else {
             return

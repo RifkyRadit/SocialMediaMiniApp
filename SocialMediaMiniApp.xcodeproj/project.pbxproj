@@ -148,7 +148,7 @@
 				C3C04307284CE01F00167F20 /* PhotoDetail */,
 				C3A74393284B36E100120A2A /* UserDetail */,
 				C3A7437A284AF67300120A2A /* PostDetail */,
-				C394B8B0284A6B1B001DC2D1 /* Helper+Extension */,
+				C394B8B0284A6B1B001DC2D1 /* Helper */,
 				C394B8A4284A69DB001DC2D1 /* Feed */,
 				C394B890284A69C8001DC2D1 /* AppDelegate.swift */,
 				C394B892284A69C8001DC2D1 /* SceneDelegate.swift */,
@@ -230,7 +230,7 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		C394B8B0284A6B1B001DC2D1 /* Helper+Extension */ = {
+		C394B8B0284A6B1B001DC2D1 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
 				C394B8B2284A6B31001DC2D1 /* Constant.swift */,
@@ -238,7 +238,7 @@
 				C38E51DA284BB61200CC92AF /* StateView.swift */,
 				C38E51E0284BBBA400CC92AF /* ImageLoader.swift */,
 			);
-			path = "Helper+Extension";
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		C3A7437A284AF67300120A2A /* PostDetail */ = {
