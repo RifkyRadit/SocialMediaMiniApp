@@ -1,0 +1,6 @@
+framework module Pods_SocialMediaMiniApp {
+  umbrella header "Pods-SocialMediaMiniApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
